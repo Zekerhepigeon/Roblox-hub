@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,3 +69,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js" defer></script> <!-- 👈 add login.js -->
+</head>
+<body>
+
+<header>
+    <h1>Roblox Game Hub</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add-game.html">Add Game</a>
+        <a id="discord-login" class="login-button" href="#">Login with Discord</a> <!-- 👈 add ID here -->
+    </nav>
+</header>
+
+<main>
+    <h2>Welcome to the Roblox Game Hub!</h2>
+    <p>Discover, add, and share your favorite Roblox games.</p>
+
+    <section id="gamesList" class="games-list">
+        <!-- Games will appear here -->
+    </section>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const gamesList = document.getElementById('gamesList');
+    const games = JSON.parse(localStorage.getItem('games')) || [];
+
+    if (games.length === 0) {
+        gamesList.innerHTML = "<p>No games added yet. Go to 'Add Game' to create one!</p>";
+    } else {
+        games.forEach(game => {
+            const gameCard = document.createElement('div');
+            gameCard.className = 'game-card';
+            gameCard.innerHTML = `
+                <img src="${game.image}" alt="${game.name}" style="width: 100%; height: auto; border-radius: 10px;">
+                <h3>${game.name}</h3>
+                <p>${game.bio}</p>
+                <p><strong>Total Players:</strong> ${game.players}</p>
+            `;
+            gamesList.appendChild(gameCard);
+        });
+    }
+});
+</script>
+
+</body>
+</html>
+>>>>>>> 3ff9f7efe687fb47973b639448c7436cad00bcc6

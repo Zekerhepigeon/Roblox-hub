@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,3 +37,43 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Game - Roblox Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Roblox Game Hub</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add-game.html">Add Game</a>
+        <a class="login-button" href="#">Login with Discord</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Add a New Game</h2>
+    <form id="gameForm" class="add-game-form">
+        <input type="text" id="gameName" placeholder="Game Name" required>
+        
+        <input type="url" id="gameImage" placeholder="Game Image URL" required>
+        
+        <textarea id="gameBio" placeholder="Game Bio / Description" rows="4" required></textarea>
+        
+        <input type="number" id="gamePlayers" placeholder="Total Players (number)" required>
+        
+        <button type="submit">Add Game</button>
+    </form>
+</main>
+
+<script src="add-game.js"></script> <!-- 👈 Add this to connect your form logic -->
+
+</body>
+</html>
+>>>>>>> 3ff9f7efe687fb47973b639448c7436cad00bcc6
